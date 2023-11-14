@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import products from '../views/products.vue'
 import login from '../views/login.vue'
 import register from '../views/register.vue'
+import admin from '../views/admin.vue'
  
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
