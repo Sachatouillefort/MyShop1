@@ -1,10 +1,17 @@
 <template>
-<section>
-    <h1>REGISTER</h1>
-</section>
+    <section>
+        <Register_comp/>
+    </section>
 </template>
-
+    
 <script>
+    import Register_comp from '../components/Register_comp.vue'
+
+    export default {
+    components: {
+        Register_comp,
+        } 
+    }
 </script>
 
 <style>
