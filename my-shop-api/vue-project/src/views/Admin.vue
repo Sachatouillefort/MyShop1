@@ -1,6 +1,6 @@
 <template>
     <section>
-      <h1>ADMIN</h1>
+      <h1>ADMINdrtyfugihugyftdyr</h1>
     </section>
   </template>
   
