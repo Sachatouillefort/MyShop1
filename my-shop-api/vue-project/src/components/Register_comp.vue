@@ -20,9 +20,9 @@
                     </div>
                 </div>
                 <div class="form-field">
-                    <label class="form-label">Re Password</label>
+                    <label class="form-label">Full Name</label>
                     <div class="form-control">
-                        <input placeholder="Type here" type="password" class="input max-w-full" />
+                        <input placeholder="Type here" type="text" class="input max-w-full" />
                     </div>
                 </div>
                 <div class="form-field">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-field pt-5">
                     <div class="form-control justify-between">
-                        <button type="button" class="btn btn-primary w-full">Register</button>
+                        <button @click="registerUser" class="btn btn-primary w-full">Register</button>
                     </div>
                 </div>
     
@@ -49,9 +49,36 @@
     </section>
     </template>
     
-    <script>
-    </script>
+<script>
+    import axios from 'axios';
+
+    export default {
+        data() {
+        return {
+            email: '',
+            password: '',
+            fullName: '',
+        };
+        },
+        methods: {
+        async registerUser() {
+            try {
+                console.log(this.email, this.password, this.fullName)
+            const response = await axios.post('http://localhost/api/users', {
+                email: this.email,
+                password: this.password,
+                fullName: this.fullName,
+            });
+            console.log(response.data);
+            // Vous pouvez rediriger l'utilisateur ou effectuer d'autres actions nécessaires après l'inscription réussie.
+            } catch (error) {
+            console.error(error.response.data);
+            // Gérez les erreurs ici (affichage d'un message d'erreur, etc.).
+            }
+        },
+        },
+    };
+</script>
     
-    <style>
-    </style>
-    
+<style>
+</style>
