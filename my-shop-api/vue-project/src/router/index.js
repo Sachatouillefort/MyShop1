@@ -32,8 +32,20 @@ const router = createRouter({
       path: '/admin',
       name: 'admin',
       component: admin 
+   
     },
-  ]
+  ],
+  state: {
+    token: null,
+  },
+  mutations: {
+    setToken(state, token) {
+      state.token = token;
+    },
+  },
+  getters: {
+    getToken: (state) => state.token,
+  },
 })
  
 export default router
