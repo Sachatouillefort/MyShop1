@@ -7,7 +7,7 @@
 
 <script>    
     import search_comp from '../components/search_comp.vue'
-    import Login_comp from '../components/Login_comp.vue'
+    import Login_comp from '../components/login_comp.vue'
 
     export default {
         components: {

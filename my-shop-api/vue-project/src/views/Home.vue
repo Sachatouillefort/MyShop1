@@ -1,19 +1,18 @@
-
 <template>
-     <search_comp/>
-     <navbar_comp/>
+    <search_comp/>
+    <user_comp/>
 </template>
 
 <script>
-    import search_comp from '../components/search_comp.vue'
-    import navbar_comp from '../components/navbar_comp.vue'
+   import search_comp from '../components/search_comp.vue'
+   import user_comp from '../components/user_comp.vue'
 
-    export default {
-        components: {
-            search_comp,
-            navbar_comp,
-        } 
-    }
+   export default {
+       components: {
+           search_comp,
+           user_comp,
+       }
+   }
 
 </script>
 

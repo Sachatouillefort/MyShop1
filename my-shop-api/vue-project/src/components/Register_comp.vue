@@ -53,31 +53,52 @@
     import axios from 'axios';
 
     export default {
-        data() {
-        return {
-            email: '',
-            password: '',
-            fullName: '',
-        };
-        },
-        methods: {
-        async registerUser() {
-            try {
-                console.log(this.email, this.password, this.fullName)
-            const response = await axios.post('http://localhost/api/users', {
-                email: this.email,
-                password: this.password,
-                fullName: this.fullName,
-            });
-            console.log(response.data);
-            // Vous pouvez rediriger l'utilisateur ou effectuer d'autres actions nécessaires après l'inscription réussie.
-            } catch (error) {
-            console.error(error.response.data);
-            // Gérez les erreurs ici (affichage d'un message d'erreur, etc.).
-            }
-        },
-        },
+  data() {
+    return {
+      email: '',
+      password: '',
+      fullName: '',
     };
+  },
+  methods: {
+    async registerUser() {
+      try {
+
+        const authToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDAyNDM2MjcsImV4cCI6MTcwMDI0NzIyNywicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImF6ZXJ0eSJ9.cqGzvRXlbQ-zldht55251KNQOVtVgbaq7tZPmx9LFpobCxVtY6k70Bm0gy5fIiOYpW9Fc-SvwLXlySTlBsHphlIYoFm5iq8p7Z5XntcO8gdCD15Nw0XBxT3mQxez7Slax6tdztJjYoDXFzsQYzLhHCKzM43ldIHiMleG0VdjneU2A1tTEb63KZUndDtmuWnmA9-_sa-C8zyPcGjhU-RvBEz9nKaUBBRuZktpjkwkaUmUAGTbfMaZJ_UsJTGIAF-qfvGrEgx0xTP2fo5ZW-Uk7tFfRx8bja47M3oM0UVKU9KlN5b_7iIwN1cLKjvHwHPrU_vY1YARUX51XLDqRtZ0iw';
+
+        console.log(this.email, this.password, this.fullName);
+
+        const url = 'http://localhost/api/users'; // Remplacez par l'URL réelle de votre API
+
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authToken}`,
+          },
+          body: JSON.stringify({
+            email: this.email,
+            password: this.password,
+            fullName: this.fullName,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Erreur lors de l'inscription: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+        router.push({ path: '/admin' })
+        // Vous pouvez rediriger l'utilisateur ou effectuer d'autres actions nécessaires après l'inscription réussie.
+      } catch (error) {
+        console.error(error.message);
+        // Gérez les erreurs ici (affichage d'un message d'erreur, etc.).
+      }
+    },
+  },
+};
+
 </script>
     
 <style>

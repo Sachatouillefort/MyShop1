@@ -1,22 +1,15 @@
 <template>
-    <section>
-        <header>
-            <div id = "haut-de-page">
-                <div class="logo">
-                    <img src="../img/logo.png"  alt="logo site">
-                </div>
-                    <h2>MyShop</h2>
-                    <div id="search">
-                        <input type="text" v-model ="search" placeholder="search-bar" style="width: 90%;">
-                    </div>
- 
-                    <router-link to="/login" id="login-button" ms-hide-element="true" href="" class="button logout login w-button">Log In</router-link>
+    <div id = "haut-de-page">
+        <div class="logo">
+            <img src="../img/logo.png"  alt="logo site">
+        </div>
+            <h2>MyShop</h2>
+            <div id="search">
+                <input type="text" v-model ="search" placeholder="search-bar" style="width: 90%;">
             </div>
-        </header>
-        <body>
-            
-        </body>
-    </section>
+
+            <router-link to="/login" id="login-button" ms-hide-element="true" href="" class="button logout login w-button">Login</router-link>
+    </div>
 </template>
  
 <script>

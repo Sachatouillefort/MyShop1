@@ -1,4 +1,3 @@
-
 <template>
 <div class="mx-auto flex w-full max-w-sm flex-col gap-6 mt-48">
     <div class="flex flex-col items-center">
@@ -61,7 +60,7 @@ export default {
 
         if (response.status === 200) {
           console.log('Login successful');
-          router.push({ path: '/' })
+          router.push({ path: '/admin' })
         } else {
           console.error('Login failed:', response.data);
         
