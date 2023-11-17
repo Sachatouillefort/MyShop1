@@ -1,4 +1,4 @@
-# MyShopc©©©©©©©©©©©©©
+# MyShopc
 
 Description brève du projet.
 
