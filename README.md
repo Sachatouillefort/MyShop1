@@ -1,4 +1,4 @@
-# MyShopc
+# MyShop
 
 
 ## Table des Matières
