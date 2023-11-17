@@ -14,6 +14,16 @@ Description brève du projet.
 Indiquez ici les étapes nécessaires pour installer votre projet. Vous pouvez également fournir des exemples de code si nécessaire.
 
 ```bash
-$ git clone https://github.com/votre-utilisateur/votre-projet.git
 $ cd votre-projet
-$ npm install  # ou autre commande d'installation
+$ npm install  # ou autre commande d'installation$
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
