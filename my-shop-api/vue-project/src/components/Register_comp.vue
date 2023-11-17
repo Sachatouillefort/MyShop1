@@ -68,8 +68,7 @@
 
         console.log(this.email, this.password, this.fullName);
 
-        const url = 'http://localhost/api/users'; // Remplacez par l'URL réelle de votre API
-
+        const url = 'http://localhost/api/users'; 
         const response = await fetch(url, {
           method: 'POST',
           headers: {
@@ -90,10 +89,8 @@
         const data = await response.json();
         console.log(data);
         router.push({ path: '/admin' })
-        // Vous pouvez rediriger l'utilisateur ou effectuer d'autres actions nécessaires après l'inscription réussie.
       } catch (error) {
         console.error(error.message);
-        // Gérez les erreurs ici (affichage d'un message d'erreur, etc.).
       }
     },
   },
