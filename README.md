@@ -13,7 +13,7 @@ cd my-shop-api
 ```
 
 ```
-npm instal
+npm install
 ```
 
 ```
