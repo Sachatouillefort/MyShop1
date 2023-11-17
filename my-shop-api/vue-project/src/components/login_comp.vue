@@ -1,11 +1,11 @@
 
 <template>
-<div class="mx-auto flex w-full max-w-sm flex-col gap-6">
+<div class="mx-auto flex w-full max-w-sm flex-col gap-6 mt-48">
     <div class="flex flex-col items-center">
             <h1 class="text-3xl font-semibold">Sign In</h1>
             <p class="text-sm">Sign in to access your account</p>
         </div>
-    <div class="form-field">
+    <div class="form-field">    
       <label class="form-label">Email address</label>
       <input ref="email" placeholder="Type here" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="input max-w-full" />
       <label class="form-label">

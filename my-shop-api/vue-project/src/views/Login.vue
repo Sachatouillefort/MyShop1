@@ -1,20 +1,24 @@
 <template>
     <section>
+        <search_comp/>
         <Login_comp/>
-    </section>
-    </template>
-    
-    <script>
-        import Login_comp from '../components/Login_comp.vue'
+</section>
+</template>
 
-        export default {
-            components: {
-                Login_comp,
-            } 
-        }
+<script>    
+    import search_comp from '../components/search_comp.vue'
+    import Login_comp from '../components/Login_comp.vue'
 
-    </script>
-    
-    <style>
-    </style>
-    
+    export default {
+        components: {
+            search_comp,
+            Login_comp,
+        } 
+    }
+
+</script>
+
+
+
+<style>
+</style>
