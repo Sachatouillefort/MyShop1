@@ -1,15 +1,22 @@
 <template>
-    <div id = "haut-de-page">
-        <div class="logo">
-            <img src="../img/logo.png"  alt="logo site">
-        </div>
-            <h2>MyShop</h2>
-            <div id="search">
-                <input type="text" v-model ="search" placeholder="search-bar" style="width: 90%;">
+    <section>
+        <header>
+            <div id = "haut-de-page">
+                <div class="logo">
+                    <img src="../img/logo.png"  alt="logo site">
+                </div>
+                <router-link  to="/" id="test" ms-hide-element="true" href=""><h2>MyShop</h2></router-link>
+                    <div id="search">
+                        <input type="text" v-model ="search" placeholder="search-bar" style="width: 90%;">
+                    </div>
+ 
+                    <router-link to="/login" id="login-button" ms-hide-element="true" href="" class="button logout login w-button">Log In</router-link>
             </div>
-
-            <router-link to="/login" id="login-button" ms-hide-element="true" href="" class="button logout login w-button">Login</router-link>
-    </div>
+        </header>
+        <body>
+            
+        </body>
+    </section>
 </template>
  
 <script>
@@ -20,6 +27,10 @@ body {
   font-family: Arial, sans-serif;
   margin: 0 auto;
 }
+#test{
+    text-decoration: none;
+    color:black;
+}
 #haut-de-page{
     display: flex;
     margin-left: 30px;
@@ -28,6 +39,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
+    text-decoration: none;
 }
 .logo img{
   max-width:20%;
@@ -80,4 +92,6 @@ a#login-button.button.logout.login.w-button:hover {
     font-weight: 400;
     outline: 0;
 }
+ 
 </style>
+ 
